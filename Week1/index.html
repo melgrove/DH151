@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello World</title>
+	<title>Map of Vancouver</title>
 	<meta charset="utf-8" />
 
 	<!-- style sheets -->
@@ -17,26 +17,38 @@
 
 	<div class="header">
 		<p>
-            Hello World
+            Vancouver
         </p>
 	</div>
 	<div class="sidebar">
-		My Sidebar
+        <button id="sp">Go to Stanley Park</button>
+        <button id="bc">Go to BC Place</button>
+        <button id="gi">Go to Grandville Island</button>
 	</div>
 	<div class="content">
         <div id="map"></div>
     </div>
     
     <script>
-        const map = L.map('map').setView([34.0697,-118.4432], 17);
+        const map = L.map('map').setView([49.276292,-123.116226], 12);
     
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
     
-        const marker = L.marker([34.0697,-118.4432]).addTo(map)
-            .bindPopup('The Technology Sandbox<br> Where Yoh is sitting this very moment')
-            .openPopup();	
+        L.marker([49.276750,-123.111999]).addTo(map)
+            .bindPopup('BC Place');
+        
+        L.marker([49.299999,-123.139999]).addTo(map)
+            .bindPopup('Stanley Park');
+        
+            L.marker([49.269498922, -123.134332796]).addTo(map)
+            .bindPopup('Grandville Island');
+
+        document.getElementById('sp').onclick = () => map.flyTo([49.299999,-123.139999], 13)
+        document.getElementById('bc').onclick = () => map.flyTo([49.276750,-123.111999], 13)
+        document.getElementById('gi').onclick = () => map.flyTo([49.269498922, -123.134332796], 13)
+
     </script>
 
 </body>

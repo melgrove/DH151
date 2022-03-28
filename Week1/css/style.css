@@ -5,6 +5,14 @@ body,html {
     font-family: sans-serif;
 }
 
+button {
+    padding: 4px;
+    margin-top: 4px;
+    border: #6b9ac7 solid 4px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
 #map {
 	height: 100%;
 }
@@ -34,7 +42,7 @@ body {
 .sidebar {
 	grid-area: sidebar;
 	padding:10px;
-    background-color: rgb(228, 228, 228);
+    background-image: url("https://www.mmc.gov/wp-content/themes/mmc/img/mmc-header-image-ocean.jpg");
 }
 .content {
 	grid-area: content;
