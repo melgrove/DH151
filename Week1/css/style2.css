@@ -1,0 +1,48 @@
+h1 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 60px;
+    text-decoration: wavy underline rgb(255, 127, 80);
+}
+
+body {
+    margin: 0;
+    color: white
+}
+
+p {
+    font-size: 18px;
+}
+
+ul {
+    font-size: 18px;
+}
+
+.container {
+    position: absolute;
+     width: 40%;
+     padding-left: 20px;
+     margin-left: 30px;
+     border-left: 3px solid rgb(255, 127, 80);
+}
+
+.inset {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+}
+
+a {
+    color: coral;
+}
+
+.cc {
+    cursor: pointer; text-decoration: underline; color: coral;
+    position: absolute;
+    right: -180px;
+    top: 75px;
+    width: 150px; 
+}
