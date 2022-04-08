@@ -1,0 +1,30 @@
+body,html {
+	margin:0;
+	height:100%;
+    width:100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+    padding: 4px;
+    margin-top: 4px;
+    border: #6b9ac7 solid 4px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#map {
+	height: 100%;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+#content {
+    grid-area: content;
+    display: block;
+    height: 85vh;
+}
