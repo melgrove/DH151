@@ -40,7 +40,7 @@ very simple now that it's been spelled out! What may be the most wishy-washy to 
 the relationship between the rows. The real world gives us an easy interpretation, because there are countless examples of processes which "attempt" to make
 many copies of the same thing, but end up making many slightly different things. In this case, the rows can be related by the _process_ that creates them.
 
-In The Data Grid, the main way to view data is with a table of columns and rows (_[see here!](https://www.thedatagrid.org/filter)_). Each row is either an _observation_ or an _item_. Within the context of TDG's
+In The Data Grid, the main way to view data is with a table of columns and rows (_[see here](https://www.thedatagrid.org/filter)_). Each row is either an _observation_ or an _item_. Within the context of TDG's
 data model, observations are instances of items, where many observations can be recorded of a single item. The relationship of rows for items or observations is
 as we described previously, by a common _process_. 
 
@@ -53,11 +53,18 @@ of geospatial columns of tabular data: _geospatial columns of any data (even dat
 stacked in a single column_. This is pretty interesting, a geospatial property can act as a shared property between arbitrary entities.
 
 Ok. Let's use this newfound mental model. After all, we are interested in creating a _geospatial view_ for a system that has been designed with a _tabular view_ 
-in mind. As we mentioned before, The Data Grid has the concept of _items_ and _observations_, both of which are ways to relate rows in a table to eachother. With
-a map, however, we are interested in relating data by its common geospatial properties. From a tabular perspective, we are essentially stacking rows, but only
-matching up the geospatial columns, thus forgoing the 3rd requirement for tabular data: _Within the entire table each entity has to be of the same class_. 
+in mind. As we mentioned before, The Data Grid has the concept of _items_ and _observations_, both of which are ways to relate rows in a table to eachother. With a map, however, we are interested in relating data by its common geospatial properties. From a tabular perspective, we are essentially stacking rows, but only matching up the geospatial columns, thus forgoing the 3rd requirement for tabular data: _Within the entire table each entity has to be of the same class_. 
 
-With this information
+With this _tabular view_ interpretation of a _geospatial view_, we can finally start to design the architecture needed to create a map on The Data Grid. 
+The platform has many conditions for a row to be related to another row and thus for a table to be displayed. In terms of our mental model this is analagous
+to there being many different _classes of entities_. The various options which uniquely define a _class of instances_ is below:
+1. Database
+2. Item or Observation
+3. Feature
+One must select a value for all three of these options before it is possible to relate rows to eachother and display a table. Accordingly, when requesting data from the API, all three of these options must be specified so the server can create a valid SQL query to return tabular data. With the _geospatial view_, we no longer need to conform to this constraint. In principle, it would be possible to display geospatial data from _all_ databases, from _all_
+features, from both items and observations on a single map, since the only row relation needed is the geospatial property.
+
+
 in a view. In a table view, 
     document any insightful sites you found and describe why it inspires you;
     describe in more detail the datasets you plan to use, and how;
