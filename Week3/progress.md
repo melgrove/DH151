@@ -64,11 +64,18 @@ to there being many different _classes of entities_. The various options which u
 One must select a value for all three of these options before it is possible to relate rows to eachother and display a table. Accordingly, when requesting data from the API, all three of these options must be specified so the server can create a valid SQL query to return tabular data. With the _geospatial view_, we no longer need to conform to this constraint. In principle, it would be possible to display geospatial data from _all_ databases, from _all_
 features, from both items and observations on a single map, since the only row relation needed is the geospatial property.
 
+In practice, there is a very good technical question of whether we should allow entities from _any_ of the classes to be combined together. Surely it would
+be interesting to see data from different databases in the same map, but it introduces complexity.
 
-in a view. In a table view, 
-    document any insightful sites you found and describe why it inspires you;
-    describe in more detail the datasets you plan to use, and how;
-    begin to articulate what the site will look like;
-    report responsitilities and progress made by each group member;
-    describe your hopes on how the site will help a particular cause;
-    include images, photos, sketches to visually enhance your post;
+## Responsibilities
+There is quite a bit of work to be done. I think that the following steps encapsulate what must be done.
+1. Think about geographic data at a high level, informing the process of UI and architecture design
+2. Create a feature specification, describing what the feature hopes to achieve and the ways in which the system will support it (high level)
+3. Create a UI spec in Figma
+4. Write system architecture
+5. Write the frontend to conform to the UI spec
+6. Write the backend to conform to the system architecture
+
+## Hopes and Dreams
+I hope that the mapping feature will increase accessibility to understanding open data. There is currently a lack of tools for understand and analyze open
+data, and adding a robust mapping tool will help those without a technical background understand and visualize this data.
