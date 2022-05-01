@@ -67,6 +67,9 @@ features, from both items and observations on a single map, since the only row r
 In practice, there is a very good technical question of whether we should allow entities from _any_ of the classes to be combined together. Surely it would
 be interesting to see data from different databases in the same map, but it introduces complexity.
 
+### Feature Requirements
+...
+
 ## Responsibilities
 There is quite a bit of work to be done. I think that the following steps encapsulate what must be done.
 1. Think about geographic data at a high level, informing the process of UI and architecture design
