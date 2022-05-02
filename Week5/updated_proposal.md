@@ -104,7 +104,7 @@ to have when successfully implemented. Another name for the following section is
 1. A user can display _any_ geospatial data on a map, regardless of the database, query type (item/observation), or feature
    1. Points, lines, and regions can all be viewed on top of eachother
    2. UI for selection of geospatial fields to query and display
-   3. Scale, zoom level, attribution, and other standard niceties
+   3. Scale, zoom level, attribution, and other standard map niceties
 2. A user can see data that is associated by entity (1. in the _abstracted model_) to any geospatial column. ie the rest of the data from the row that
 the geospatial column is in can be viewed when clicking on it.
 ### Final
@@ -113,18 +113,31 @@ the geospatial column is in can be viewed when clicking on it.
    2. A point, line, or region can be drawn on the map and used as one of the inputs in the above functions
 2. ...
 
+## System Architecture (for midterm)
+### Frontend (Angular)
+1. Data formatting
+   1. Create an internal object that has all of the geospatial columns (`newFieldType` = `geoPoint`, `geoLine`, `geoRegion`)
+2. UI
+   1. New screen which uses the above object to let the user select geospatial fields as filters
+   2. Integration between the new map view and the tabular view
+3. Map
+   1. Import Leaflet into Angular, format onto the page correctly
+   2. Integrate geospatial fields as layers
+### Backend (Node.js, PostgreSQL)
+1. Update `setupObject` to include information on whether fields are geospatial (`newFieldType`)
+
 # Workflow
 
-1. Planning
-    1. Proposal, feature selection, goals
-    2. System requirements
-    3. Software architecture, documentation
-    4. Wireframes and UI planning
-2. Execution
-    1. Update database schema if changes are needed
-    2. Update API if changes are needed
-    3. Write frontend section
-    4. Write user guide
+1. [ ] Planning
+    1. [X] Proposal, feature selection, goals
+    2. [X] System requirements
+    3. [X] Software architecture, documentation
+    4. [ ] Wireframes and UI planning
+2. [ ] Execution
+    1. [ ] Update database schema if changes are needed
+    2. [ ] Update API if changes are needed
+    3. [ ] Write frontend section
+    4. [ ] Write user guide
 
 # Techinal Scope
 
